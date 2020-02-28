@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFFFFF;
+}
+
+.medium-devices {
+  display: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .container .form {
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-shadow: 0 1px 10px -3px #BABABA;
+  -moz-box-shadow: 0 1px 10px -3px #BABABA;
+  box-shadow: 0 1px 10px -3px #BABABA;
+}
+
+.container .form .loginClerkFormLeft {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: url('../../assets/login/Mask-Clerk.png') no-repeat center center;
+  background-size: cover;
+}
+
+.container .form .loginClerkFormLeft .large-devices {
+  margin-left: 12%;
+}
+
+.container .loginClerkFormRight {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.container .loginClerkFormRight h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+  color: #BABABA;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.container .loginClerkFormRight form .loginInputGroup input {
+  width: 250px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 3px solid #7875a9;
+  outline: none;
+}
+
+::placeholder {
+  font-size: 10pt;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #BABABA;
+}
+
+.container .loginFormRight form .loignInputGroup input:focus {
+  width: 250px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 3px solid #BABABA;
+  outline: none;
+  transition: 0.5s;
+}
+
+.container .loginClerkFormRight form .btnGroup button {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.container .form .loginClerkFormRight form .btnLogin {
+  background-image: linear-gradient(to right, #7875a9, #8374a8, #8e73a7, #9972a4, #a371a1);
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container .form .loginClerkFormRight form .btnLogin:hover {
+  background: #7875a9;
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container .form .loginClerkFormRight form .btnCancel {
+  background: linear-gradient(to right, #BABABA, #DEDEDE);
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container .form .loginClerkFormRight form .btnCancel:hover {
+  background: #8A8A8A;
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btnLogin .link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.loginClerkFormRight form .btnSignUp .link {
+  color: #7875a9;
+  text-decoration: none;
+}
+
+.loginClerkFormRight form .btnSignUp .link:hover {
+  color: #a371a1;
+}
+
+@media(max-width: 768px){
+  .container .form {
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0 1px 10px -3px #BABABA;
+    -moz-box-shadow: 0 1px 10px -3px #BABABA;
+    box-shadow: 0 1px 10px -3px #BABABA;
+  }
+
+  .container .form .lognClerkFormLeft {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .form .loginClerkFormLeft .large-devices {
+    display: none;
+  }
+
+  .medium-devices {
+    display: block;
+    transform: translateY(-20%);
+  }
+
+  .container .loginClerkFormRight h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #BABABA;
+    text-align: center;
+  }
+
+  .container .loginClerkFormRight form{
+    transform: translateY(-15%);
+  }
+  
+}
+ 

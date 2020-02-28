@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+.page-path {
+  font-family: 'Roboto Condensed', sans-serif ;
+  letter-spacing: 2px;
+  color: #334A51;
+  margin: 20px 0px 20px 20px;
+}
+
+.wrapper-home {
+  width: 80vw;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-boxs {
+  display: grid;
+  grid-template-columns: 220px 220px 220px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
+.home-boxs .box {
+  height: 120px;
+  -webkit-box-shadow: 0 1px 10px -3px #9c9c9c;
+  -moz-box-shadow: 0 1px 10px -3px #9c9c9c;
+  box-shadow: 0 1px 10px -3px #9c9c9c;
+}
+
+.home-boxs .box:hover {
+  height: 120px;
+  transform: scale(1.1);
+  transition: 0.5s;
+  -webkit-box-shadow: 0 1px 10px -3px #7e7d7d;
+  -moz-box-shadow: 0 1px 10px -3px #7e7d7d;
+  box-shadow: 0 1px 10px -3px #7e7d7d;
+}
+
+.box:nth-child(1) {
+  background-color: #ffffff;
+  color: #15141f;
+}
+
+.box:nth-child(2){
+  background-color: #ffffff;
+  color: #15141f;
+}
+
+.box:nth-child(3) {
+  background-color: #ffffff;
+  color: #15141f;
+}
+
+.box:nth-child(4) {
+  background-color: #ffffff;
+  color: #15141f;
+}
+
+.box:nth-child(5){
+  background-color: #ffffff;
+  color: #15141f;
+}
+
+.box:nth-child(6) {
+  background-color: #ffffff;
+  color: #15141f;
+}
+
+.home-boxs .box h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14pt;
+  letter-spacing: 1px;
+  margin: 10px 0 0 10px;
+}
+
+.home-boxs .box p {
+  margin: 20px 0 0 10px;
+  font-size: 20pt;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+}

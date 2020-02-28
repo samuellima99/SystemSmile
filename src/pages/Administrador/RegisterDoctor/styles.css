@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
+
+h3{
+  font-family: 'Nunito', sans-serif;
+  color: #9c9c9c;
+  margin: 20px 0px 20px 0;
+}
+
+.wrapper-register {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+
+.box-form .header-form {
+  margin-top: 10px;
+}
+
+.box-form .header-form .path-page {
+  font-size: 12pt;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: #8C8A8A;
+}
+
+.box-form .header-form .description-page {
+  font-size: 16pt;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  margin: 50px 0 40px 0;
+  text-align: center;
+  color: #BABABA;
+}
+
+.box-form .form-clerk {
+  display: flex;
+  justify-content: center;
+}
+
+.box-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 120px;
+}
+
+.box-form .form-clerk .clerkInputGroup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.box-form .form-clerk .clerkInputGroup input {
+  width: 350px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 3px solid #61E6BF;
+  outline: none;
+}
+
+.box-form .form-clerk .clerkInputGroup input:focus {
+  width: 350px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 3px solid #BABABA;
+  outline: none;
+  transition: 0.5s;
+}
+
+.box-form .form-clerk .selectGroup select{
+  background: none;
+  width: 350px;
+  border: none;
+  border-bottom: 3px solid #61E6BF;
+  font-size: 10pt;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #BABABA;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.box-form .form-clerk .selectGroup select:focus{
+  width: 350px;
+  outline: none;
+  border-bottom: 3px solid #BABABA;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.box-form .form-clerk .btnGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-form .form-clerk .btnGroup button {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.box-form .form-clerk .btnGroup .btnRegister {
+  background:#3AC5B8;
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.box-form .form-clerk .btnGroup .btnRegister:hover {
+  background:#30a196;
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.box-form .form-clerk .btnGroup .btnCancel {
+  background:#BABABA;
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.box-form .form-clerk .btnGroup .btnCancel:hover {
+  background:#919191;
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}

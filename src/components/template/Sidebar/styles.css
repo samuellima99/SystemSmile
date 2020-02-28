@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:Quicksand:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  width: 25%;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+/*---------------Sidebar----------------*/
+
+.wrapper nav {
+  width: 300px;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #2e6f72, #2d7878, #2e827d, #318c80, #379583);
+}
+
+.wrapper nav .logo {
+  width: 75%;
+  height: 70px;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.wrapper nav .logo img {
+  width: 100%;
+  height: 60px;
+}
+
+.wrapper nav ul li {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.wrapper nav ul li:hover {
+  width: 200px;
+  background: #3dafa0;
+  border-radius: 10px;
+}
+
+.wrapper nav ul li img {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px 0 10px;
+}
+
+.wrapper nav ul li .link {
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif ;
+  font-weight: 500;
+  font-size: 18pt;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+}
+
+.subMenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top: 45px;
+  right: 0px;
+  width: 200px;
+  background-color: #3BB7A6;
+  font-weight: bold;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.subMenu .subMenuItem a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif ;
+  font-weight: 200;
+  margin: 10px;
+  letter-spacing: 2px;
+}
+
+.subMenu .subMenuItem {
+  padding-top: 8px;
+  margin: 0;
+  cursor: pointer;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+}
+
+.subMenu .subMenuItem:last-child {
+  border-bottom: none;
+}
+
+.subMenu .subMenuItem:hover {
+  background-color: rgb(49, 155, 141);
+  margin: 0;
+  border-radius: 0;
+  cursor: pointer;
+  color: white;
+}
+
+.content-box {
+  width: 100%;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+

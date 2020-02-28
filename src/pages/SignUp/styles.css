@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFFFFF;
+}
+
+.medium-devices {
+  display: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .container .form {
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-shadow: 0 1px 10px -3px #BABABA;
+  -moz-box-shadow: 0 1px 10px -3px #BABABA;
+  box-shadow: 0 1px 10px -3px #BABABA;
+}
+
+.container .form .formLeft {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: url('../../assets/login/mask.png') no-repeat center center;
+  background-size: cover;
+}
+
+.container .form .formLeft .large-devices  {
+  margin-left: 12%;
+}
+
+ .container .formRight {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.container .formRight h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+  color: #BABABA;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.container .formRight form .inputGroup input {
+  width: 250px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 3px solid #61E6BF;
+  outline: none;
+}
+
+::placeholder {
+  font-size: 10pt;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #BABABA;
+}
+
+.container .formRight form .inputGroup input:focus {
+  width: 250px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 3px solid #BABABA;
+  outline: none;
+  transition: 0.5s;
+}
+
+.container .formRight form .selectGroup select {
+  background: none;
+  width: 250px;
+  border: none;
+  border-bottom: 3px solid #61E6BF;
+  font-size: 10pt;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #BABABA;
+  margin-bottom: 20px;
+}
+
+.container .formRight form .selectGroup select:focus {
+  width: 250px;
+  outline: none;
+}
+
+.container .formRight form .btnGroup button {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.container .form .formRight form .btnLogin {
+  background: linear-gradient(to right, #3AC5B8, #61E6BF);
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container .form .formRight form .btnLogin:hover {
+  background: #30A398;
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container .form .formRight form .btnGroup {
+  display: flex;
+  justify-content: center;
+}
+
+.container .form .formRight form .btnGroup .btnLoginBack {
+  color: #BABABA;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container .form .formRight form .btnLoginBack:hover {
+  color: #919191;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media(max-width: 768px){
+  .container .form {
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0 1px 10px -3px #BABABA;
+    -moz-box-shadow: 0 1px 10px -3px #BABABA;
+    box-shadow: 0 1px 10px -3px #BABABA;
+  }
+
+  .container .form .formLeft {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .form .formLeft .large-devices {
+    display: none;
+  }
+
+  .medium-devices {
+    display: block;
+    transform: translateY(-20%);
+  }
+
+  .container .formRight h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #BABABA;
+    text-align: center;
+  }
+
+  .container .formRight form{
+    transform: translateY(-15%);
+  }
+}

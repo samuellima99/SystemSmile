@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
+
+h3{
+  font-family: 'Nunito', sans-serif;
+  color: #9c9c9c;
+  margin: 20px 0px 20px 0;
+}
+
+.wrapper-register {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+
+.box-form {
+  background-color: #FFFFFF;
+  padding: 0 40px 0 40px;
+  border-radius: 20px;
+}
+
+.box-form .header-form {
+  margin-top: 10px;
+}
+
+.box-form .header-form .page-path {
+  font-size: 12pt;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: #8C8A8A;
+}
+
+.box-form .header-form .description-page {
+  font-size: 16pt;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  margin: 50px 0 40px 0;
+  text-align: center;
+  color: #BABABA;
+}
+
+.box-form .form-patientes {
+  display: flex;
+  justify-content: center;
+}
+
+.box-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 120px;
+}
+
+.box-form .form-patientes .patineteInputGroup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.box-form .form-patientes .patienteInputGroup input {
+  width: 350px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 3px solid #7875a9;
+  outline: none;
+}
+
+.box-form .form-patientes .patienteInputGroup input:focus {
+  width: 350px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 3px solid #BABABA;
+  outline: none;
+  transition: 0.5s;
+}
+
+.box-form .form-patientes .btnGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-form .form-patientes .btnGroup button {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.box-form .form-patientes .btnGroup .btnRegister {
+  background-image: linear-gradient(to right, #7875a9, #8374a8, #8e73a7, #9972a4, #a371a1);
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.box-form .form-patientes .btnGroup .btnRegister:hover {
+  background:#7875a9;
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.box-form .form-patientes .btnGroup .btnCancel {
+  background-image: linear-gradient(to right, #7d7d81, #858488, #8d8c8f, #959396, #9d9b9d);
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.box-form .form-patientes .btnGroup .btnCancel:hover {
+  background:#7d7d81;
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 700;
+  cursor: pointer;
+}

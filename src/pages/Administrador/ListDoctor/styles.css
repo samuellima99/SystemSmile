@@ -1,0 +1,47 @@
+.wrapper-list {
+  width: 80vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+.list-doctor {
+  display: flex;
+  justify-content: center;
+}
+
+.list-doctor table {
+  width: 900px;
+}
+
+.list-doctor thead {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+.list-doctor thead tr th {
+  width: 250px;
+  height: 40px;
+  border-top: 1px solid #BABABA;
+  border-bottom: 2px solid #BABABA;
+  border-left: none;
+  border-right: none;
+}
+
+.list-doctor tbody td {
+  border: 1px solid #BABABA;
+  text-align: center;
+  height: 40px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding: 10px 0 10px 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.list-doctor tbody td button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
