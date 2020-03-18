@@ -160,7 +160,7 @@ export default class EditDoctor extends Component {
                     </select>
                   </div>
                   <div className="btnGroup">
-                    <button className="btnRegister" type="submit">Cadastrar</button>
+                    <button className="btnRegister" type="submit">Editar</button>
                   </div>
                   <div className="btnGroup">
                     <button className="btnCancel">Cancelar</button>

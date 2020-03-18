@@ -1,13 +1,21 @@
 .wrapper-list {
   width: 80vw;
+  height: 70vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
+.clerk-box-form {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
 
 .list-clerk {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .list-clerk table {
@@ -23,7 +31,7 @@
 .list-clerk thead tr th {
   width: 250px;
   height: 40px;
-  border-top: 1px solid #BABABA;
+  border-top:none;
   border-bottom: 2px solid #BABABA;
   border-left: none;
   border-right: none;
@@ -44,4 +52,38 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.search-box {
+  display:  flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-box .page-active {
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#2e6f72;
+  margin-right: 40px;
+  border-left: 2px solid #2e6f72;
+  padding-left: 10px;
+}
+
+.search-input {
+  width: 400px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  outline: none;
+}
+
+.paginate {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  border-radius: 10px;
 }

@@ -8,6 +8,8 @@ import Main from '../../../components/template/Main';
 //import api 
 import api from '../../../services/api';
 
+import swal from 'sweetalert';
+
 export default class RegisterClerk extends Component {
 
   constructor(props) {
@@ -22,7 +24,9 @@ export default class RegisterClerk extends Component {
       specialty: '',
       email: '',
       password: '',
-      typeUser: '',
+      fk_type_user_id: '',
+      search: '',
+      errors: [],
     }
   }
 
@@ -32,27 +36,41 @@ export default class RegisterClerk extends Component {
   }
 
   handleSelectTypeUser = (e) => {
-    this.setState({ typeUser: e.target.value })
+    this.setState({ fk_type_user_id: e.target.value })
   }
 
   handleRegisterDoctor = async (e) => {
     e.preventDefault();
 
-    const { name, date_birth, cpf, telephone, cro, specialty, email, password, typeUser } = this.state;
+    const { name, date_birth, cpf, telephone, cro, specialty, email, password, fk_type_user_id } = this.state;
 
-    await api.post('api/register', {
-      name,
-      date_birth,
-      cpf,
-      telephone,
-      cro,
-      specialty,
-      email,
-      password,
-      fk_type_user_id: typeUser,
-    })
+    try {
+      const response = await api.post('api/register', {
+        name,
+        date_birth,
+        cpf,
+        telephone,
+        cro,
+        specialty,
+        email,
+        password,
+        fk_type_user_id
+      })
 
-    this.props.history.push("/admin/listDoctors");
+      if (!name || !date_birth || !cpf || !telephone || !cro || !specialty || !email || !password || !fk_type_user_id) {
+        this.setState({ errors: response.data.errors })
+      } else {
+        swal({
+          title: "Médico cadastrado com sucesso!",
+          icon: "success",
+          button: "OK",
+        });
+        this.props.history.push("/admin/listDoctors");
+      }
+
+    } catch (response) {
+      console.log(this.state.errors);
+    }
   }
 
   render() {
@@ -60,7 +78,7 @@ export default class RegisterClerk extends Component {
       <>
         <Sidebar />
         <Main>
-          <h3>Administrador - Cadastro de médicos</h3>
+          <h3 className="path-page">Administrador - Cadastro de médicos</h3>
           <div className="wrapper-register">
             <div className="box-form">
               <div className="header-form">
@@ -75,6 +93,9 @@ export default class RegisterClerk extends Component {
                       value={this.name}
                       onChange={e => this.setState({ name: e.target.value })}
                     />
+                    {this.state.errors.map(error => (
+                      <p className="error">{error.name}</p>
+                    ))}
                   </div>
                   <div className="clerkInputGroup">
                     <input
@@ -84,6 +105,9 @@ export default class RegisterClerk extends Component {
                       value={this.date_birth}
                       onChange={e => this.setState({ date_birth: e.target.value })}
                     />
+                    {this.state.errors.map(error => (
+                      <p className="error">{error.date_birth}</p>
+                    ))}
                   </div>
                   <div className="selectGroup">
                     <select onChange={this.handleSelectSexo} name="sexo">
@@ -99,6 +123,9 @@ export default class RegisterClerk extends Component {
                       value={this.cpf}
                       onChange={e => this.setState({ cpf: e.target.value })}
                     />
+                    {this.state.errors.map(error => (
+                      <p className="error">{error.cpf}</p>
+                    ))}
                   </div>
                   <div className="clerkInputGroup">
                     <input
@@ -107,6 +134,9 @@ export default class RegisterClerk extends Component {
                       value={this.telephone}
                       onChange={e => this.setState({ telephone: e.target.value })}
                     />
+                    {this.state.errors.map(error => (
+                      <p className="error">{error.telephone}</p>
+                    ))}
                   </div>
                   <div className="clerkInputGroup">
                     <input
@@ -115,6 +145,9 @@ export default class RegisterClerk extends Component {
                       value={this.cro}
                       onChange={e => this.setState({ cro: e.target.value })}
                     />
+                    {this.state.errors.map(error => (
+                      <p className="error">{error.cro}</p>
+                    ))}
                   </div>
                   <div className="clerkInputGroup">
                     <input
@@ -123,6 +156,9 @@ export default class RegisterClerk extends Component {
                       value={this.specialty}
                       onChange={e => this.setState({ specialty: e.target.value })}
                     />
+                    {this.state.errors.map(error => (
+                      <p className="error">{error.specialty}</p>
+                    ))}
                   </div>
                   <div className="clerkInputGroup">
                     <input
@@ -131,6 +167,9 @@ export default class RegisterClerk extends Component {
                       value={this.email}
                       onChange={e => this.setState({ email: e.target.value })}
                     />
+                    {this.state.errors.map(error => (
+                      <p className="error">{error.email}</p>
+                    ))}
                   </div>
                   <div className="clerkInputGroup">
                     <input
@@ -139,6 +178,9 @@ export default class RegisterClerk extends Component {
                       value={this.password}
                       onChange={e => this.setState({ password: e.target.value })}
                     />
+                    {this.state.errors.map(error => (
+                      <p className="error">{error.password}</p>
+                    ))}
                   </div>
                   <div className="selectGroup">
                     <select onChange={this.handleSelectTypeUser} name="typeUser">
@@ -147,6 +189,9 @@ export default class RegisterClerk extends Component {
                       <option value="2">Secretário(a)</option>
                       <option value="3">Médico</option>
                     </select>
+                    {this.state.errors.map(error => (
+                      <p className="error">{error.fk_type_user_id}</p>
+                    ))}
                   </div>
                   <div className="btnGroup">
                     <button className="btnRegister" type="submit">Cadastrar</button>

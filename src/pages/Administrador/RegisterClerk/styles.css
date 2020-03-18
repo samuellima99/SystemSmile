@@ -2,22 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
 
-h3{
-  font-family: 'Nunito', sans-serif;
-  color: #9c9c9c;
-  margin: 20px 0px 20px 0;
-}
-
 .wrapper-register {
   height: 70vh;
   display: flex;
   justify-content: center;
-}
-
-.box-form {
-  background-color: #FFFFFF;
-  padding: 0 40px 0 40px;
-  border-radius: 20px;
 }
 
 .box-form .header-form {
@@ -55,7 +43,7 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  flex-direction: column;
 }
 
 .box-form .form-clerk .clerkInputGroup input {
@@ -142,4 +130,9 @@ h3{
   font-size: 12pt;
   font-weight: 700;
   cursor: pointer;
+}
+
+.error {
+  font-size: 10pt;
+  color: #ff0000;
 }

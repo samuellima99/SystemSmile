@@ -5,6 +5,8 @@ import './styles.css';
 import Sidebar from '../../../components/template/Sidebar';
 import Main from '../../../components/template/Main';
 
+import swal from 'sweetalert';
+
 //import api 
 import api from '../../../services/api';
 
@@ -57,7 +59,7 @@ export default class EditClerk extends Component {
     const { name, date_birth, cpf, telephone, email, typeUser } = this.state;
     console.log(typeUser)
 
-    await api.put(`api/users/${user.id}`, {
+    const response = await api.put(`api/users/${user.id}`, {
       name,
       date_birth,
       cpf,
@@ -66,7 +68,14 @@ export default class EditClerk extends Component {
       typeUser
     });
 
-    this.props.history.push("/admin/listClerks");
+    if (response.status === 200) {
+      swal({
+        title: "Atendente editado com sucesso!",
+        icon: "success",
+        button: "OK",
+      });
+      this.props.history.push("/admin/listClerks");
+    }
   }
 
   render() {
@@ -132,7 +141,7 @@ export default class EditClerk extends Component {
                     </select>
                   </div>
                   <div className="btnGroup">
-                    <button className="btnRegister" type="submit">Cadastrar</button>
+                    <button className="btnRegister" type="submit">Editar</button>
                   </div>
                   <div className="btnGroup">
                     <button className="btnCancel">Cancelar</button>
